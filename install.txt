@@ -24,8 +24,8 @@ npx -v
 npm init
 // package.json created
 npm install express@4.16.3 --save
-// move modules directory to other place and git commit
-npm install //reinstall modules directory
 
 nano .gitignore
 node_modules
+
+npm install //reinstall modules folder
