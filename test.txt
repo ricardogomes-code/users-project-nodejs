@@ -1,0 +1,15 @@
+node index
+
+#browser
+localhost:3000
+
+#http create server
+servidor rodando!
+URL: /
+METHOD: GET
+URL: /favicon.ico
+METHOD: GET
+
+
+
+
