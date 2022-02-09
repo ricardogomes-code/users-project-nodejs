@@ -18,3 +18,14 @@ asdf global nodejs 8.11.1
 node -v
 npm -v
 npx -v
+
+
+# EXPRESS INSTALLATION
+npm init
+// package.json created
+npm install express@4.16.3 --save
+// move modules directory to other place and git commit
+npm install //reinstall modules directory
+
+nano .gitignore
+node_modules

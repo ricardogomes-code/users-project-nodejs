@@ -1,0 +1,22 @@
+{
+  "name": "users-project-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardogomes-code/users-project-nodejs.git"
+  },
+  "author": "Hcode",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricardogomes-code/users-project-nodejs/issues"
+  },
+  "homepage": "https://github.com/ricardogomes-code/users-project-nodejs#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
