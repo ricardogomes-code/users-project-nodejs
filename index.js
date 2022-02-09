@@ -1,43 +1,31 @@
-const http= require('http');
+const express = require('express');
+const app = express();
+const port = 3000;
 
-let server = http.createServer((req, res) => {
+app.get('/', (req, res) => {
 
-    console.log('URL:', req.url);
-    console.log('METHOD:', req.method);
-
-    switch (req.url) {
-
-        case '/':
-
-        res.statusCode = 200;
-        res.setHeader('Content-Type', 'text/html');
-        res.end('<h1>Olá</h1>');
-
-        break;
-
-        case '/users':
-
-        res.statusCode = 200;
-        res.setHeader('Content-Type', 'application/json')
-		
-		let usersStringify = JSON.stringify({
-            users:[{
-                name: 'Ricardo',
-                email: 'ricardo@gmail.com',
-                id: 1
-            }]
-        });
-
-        res.end(usersStringify);
-
-        break;
-
-    }
-
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/html');
+    res.end('<h1>Olá Ricardo</h1>');
 });
 
-server.listen(3000, '127.0.0.1', () => {
+app.get('/users', (req, res) => {
 
-    console.log("servidor rodando!");
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
 
+    let usersStringify = JSON.stringify({
+        users: [{
+            name: 'Ricardo',
+            email: 'ricardo@gmail.com',
+            id: 1
+        }]
+    });
+    
+    res.end(usersStringify);
+});
+
+app.listen(port, '127.0.0.1', () => {
+
+    console.log("Server running!");
 });
