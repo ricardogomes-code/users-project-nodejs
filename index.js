@@ -14,7 +14,7 @@ app.get('/users', (req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
 
-    let usersStringify = JSON.stringify({
+    let users = ({
         users: [{
             name: 'Ricardo',
             email: 'ricardo@gmail.com',
@@ -22,7 +22,7 @@ app.get('/users', (req, res) => {
         }]
     });
     
-    res.end(usersStringify);
+    res.json(users);
 });
 
 app.listen(port, '127.0.0.1', () => {
