@@ -29,3 +29,8 @@ nano .gitignore
 node_modules
 
 npm install //reinstall modules folder
+
+
+# NODEMON INSTALLATION
+npm install nodemon@1.17.3 -g
+// -g (global)
