@@ -6,7 +6,9 @@ let db = new NeDB({
 
 module.exports = app => {
 
-    app.get('/users', (req, res) => {
+    let route = app.route('/users');
+
+    app.get((req, res) => {
 
         db.find({}).sort({ name: 1 }).exec((err, users) => {
 
@@ -24,7 +26,7 @@ module.exports = app => {
         })
     });
 
-    app.post('/users', (req, res) => {
+    app.post((req, res) => {
 
         db.insert(req.body, (err, user) => {
 
