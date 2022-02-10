@@ -49,4 +49,5 @@ password
 // BODY PARSER INSTALLATION
 npm install body-parser@1.18.2 --save
 
-
+// nedb installation
+npm install nedb@1.8.0 --save 
