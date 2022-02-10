@@ -38,4 +38,15 @@ npm install nodemon@1.17.3 -g
 # CONSIGN INSTALLATION
 npm install consign@0.1.6 --save
 
+// POSTMAN INSTALLATION
+https://www.postman.com/downloads/
+POST
+Body - x-www-form-urlencoded
+name
+email 
+password	
+
+// BODY PARSER INSTALLATION
+npm install body-parser@1.18.2 --save
+
 

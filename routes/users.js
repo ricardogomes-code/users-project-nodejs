@@ -16,14 +16,12 @@ module.exports = app => {
         res.json(users);
     });
     
-    app.get('/users/admin', (req, res) => {
+    app.post('/users/', (req, res) => {
     
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
     
-        let users = ({
-            users: []
-        });
+        let users = req.body;
         
         res.json(users);
     });
