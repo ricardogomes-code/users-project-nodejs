@@ -35,6 +35,22 @@ module.exports = app => {
         })
     });
 
+    routeId.put((req, res) => {
+
+        console.log(req.params.id)
+
+        db.update({ _id: req.params.id }, req.body, err => {
+
+            if (err) {
+                app.utils.error.send(err, req, res);
+            } else {
+                res.status(200).json(Object.assign(req.params, req.body));
+            }
+
+        });
+
+    });
+
     route.post((req, res) => {
 
         db.insert(req.body, (err, user) => {
