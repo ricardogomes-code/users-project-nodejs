@@ -2,28 +2,12 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => {
+let routerIndex = require('./routes/index');
+let routerUsers = require('./routes/users');
 
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/html');
-    res.end('<h1>Olá Ricardo</h1>');
-});
+app.use(routerIndex);
 
-app.get('/users', (req, res) => {
-
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-
-    let users = ({
-        users: [{
-            name: 'Ricardo',
-            email: 'ricardo@gmail.com',
-            id: 1
-        }]
-    });
-    
-    res.json(users);
-});
+app.use(routerUsers);
 
 app.listen(port, '127.0.0.1', () => {
 
