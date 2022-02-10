@@ -7,7 +7,7 @@ let routerUsers = require('./routes/users');
 
 app.use(routerIndex);
 
-app.use(routerUsers);
+app.use('/users', routerUsers);
 
 app.listen(port, '127.0.0.1', () => {
 
