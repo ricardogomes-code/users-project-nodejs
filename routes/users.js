@@ -17,4 +17,16 @@ router.get('/users', (req, res) => {
     res.json(users);
 });
 
+router.get('/users/admin', (req, res) => {
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+
+    let users = ({
+        users: []
+    });
+    
+    res.json(users);
+});
+
 module.exports = router;
